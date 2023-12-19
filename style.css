@@ -2,6 +2,7 @@
 
 :root {
     --primary-color: #607274;
+    --secondary-color: #B2A59B;
 }
 
 * {
@@ -9,6 +10,11 @@
     box-sizing: border-box;
     color: var(--primary-color);
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    cursor: default;
+}
+
+.row {
+    margin-top: 1.8% !important;
 }
 
 p {
@@ -32,7 +38,7 @@ h1 {
 }
 
 .title {
-    font-size: 3.5em;
+    font-size: 4.5em;
 }
 
 .top70 {
@@ -41,18 +47,97 @@ h1 {
 
 .low-res-fp {
     background:url(pictures/eksplorasi-budaya-low-res.png) no-repeat;
-    width: 70%;
+    width: 80%;
 }
 
-.bg-main {
-    background-color: var(--primary-color);
+.low-res-rb {
+    background:url(pictures/ragam-batik-low-res.png) no-repeat;
 }
 
-.parent-line {
-    font-size: 0.99em;
+.low-res-dw {
+    background:url(pictures/destinasi-wisata-low-res.png) no-repeat;
+}
+
+.low-res-fb {
+    background:url(pictures/festival-budaya-low-res.png) no-repeat;
+}
+
+.low-res-cb-bg {
+    background:url(pictures/candi-borobudur-bg-low-res.png) no-repeat;
+}
+
+.low-res-cb {
+    background:url(pictures/candi-borobudur-low-res.png) no-repeat;
+}
+
+.low-res-bs-bg {
+    background:url(pictures/batik-solo-bg-low-res.png) no-repeat;
+}
+
+.low-res-bs {
+    background:url(pictures/batik-solo-low-res.png) no-repeat;
+}
+
+.low-res-dcf-bg {
+    background:url(pictures/dcf-bg-low-res.png) no-repeat;
+}
+
+.low-res-dcf {
+    background:url(pictures/dcf-low-res.png) no-repeat;
 }
 
 .line {
-    height: 1px;
+    height: 1.5px;
+    background-color: color-mix(
+        in srgb,
+        var(--primary-color),
+        transparent
+    );
+}
+
+.parent-line {
+    margin-bottom: 1% !important;
+}
+
+.first-line {
     width: 50%;
+}
+
+.cm-1 {
+    margin: 1.5% 0 2.5% 0 !important;
+}
+
+.button {
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 16px;
+    text-transform: capitalize;
+    font-weight: 300;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.custom-mw {
+    max-width: 24.3vw;
+}
+
+.cp-1 {
+    padding: 1% 2% 1% 2%;
+}
+
+.w-fc {
+    width: fit-content;
+}
+
+.second-line {
+    width: 75%;
+    margin-bottom: 2% !important;
+}
+
+.cp-2 {
+    padding: 1% 8% 1% 8%;
+}
+
+.cm-2 {
+    margin-bottom: 3% !important;
 }
