@@ -98,7 +98,7 @@ h1 {
 }
 
 .line {
-    height: 1.5px;
+    height: 1px;
     background-color: color-mix(
         in srgb,
         var(--primary-color),
@@ -108,10 +108,6 @@ h1 {
 
 .parent-line {
     margin-bottom: 1% !important;
-}
-
-.first-line {
-    width: 50%;
 }
 
 .cm-1 {
@@ -140,11 +136,6 @@ h1 {
     width: fit-content;
 }
 
-.second-line {
-    width: 75%;
-    margin-bottom: 2% !important;
-}
-
 .cp-2 {
     padding: 1.5% 8% 1.5% 8%;
 }
@@ -155,6 +146,10 @@ h1 {
 
 .cm-3 {
     margin: 0 0 -1.5% 0.5% !important;
+}
+
+.cm-4 {
+    margin-bottom: 2% !important;
 }
 
 .cs-1 {
@@ -177,6 +172,11 @@ h1 {
     text-transform: uppercase;
     color: white;
     margin: 0;
+}
+
+.cst {
+    left: 13%;
+    top: 5%;
 }
 
 footer {
