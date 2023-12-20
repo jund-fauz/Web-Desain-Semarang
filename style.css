@@ -5,6 +5,10 @@
     --secondary-color: #B2A59B;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 * {
     font-family: 'Barlow Semi Condensed', sans-serif;
     box-sizing: border-box;
@@ -51,6 +55,10 @@ h1 {
 
 .top70 {
     top: 70%;
+}
+
+.cw {
+    width: 80%;
 }
 
 .low-res-fp {
