@@ -68,6 +68,7 @@ h1 {
 
 .low-res-cb-bg {
     background:url(pictures/candi-borobudur-bg-low-res.png) no-repeat;
+    width: 100%;
 }
 
 .low-res-cb {
@@ -76,6 +77,7 @@ h1 {
 
 .low-res-bs-bg {
     background:url(pictures/batik-solo-bg-low-res.png) no-repeat;
+    width: 100%;
 }
 
 .low-res-bs {
@@ -84,6 +86,7 @@ h1 {
 
 .low-res-dcf-bg {
     background:url(pictures/dcf-bg-low-res.png) no-repeat;
+    width: 100%;
 }
 
 .low-res-dcf {
@@ -144,4 +147,30 @@ h1 {
 
 .cm-2 {
     margin-bottom: 3% !important;
+}
+
+.cm-3 {
+    margin: 0 0 -1.5% 0.5% !important;
+}
+
+.cs-1 {
+    left: 25%;
+}
+
+.cs-2 {
+    left: 17.3%;
+}
+
+.cs-3 {
+    left: 21.5%;
+}
+
+.start80 {
+    left: 80%;
+}
+
+.text-on-pic-style h1 {
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
 }
