@@ -21,18 +21,6 @@ a {
     text-decoration: none;
 }
 
-.cmt-1 {
-    margin-top: 2% !important;
-}
-
-.cmt-2 {
-    margin-top: 15% !important;
-}
-
-.cmt-3 {
-    margin-top: 10% !important;
-}
-
 p {
     margin: 0 !important;
 }
@@ -57,6 +45,18 @@ h1 {
     font-size: clamp(2em, 8vw, 4.5em);
 }
 
+.subtitle {
+    font-size: clamp(0.8rem, 2vw, 1.5rem);
+}
+
+.gc-1 > .glc > p {
+    font-size: clamp(1em, 3vw, 1.5em);
+}
+
+.cfs {
+    font-size: var(--cfs);
+}
+
 .cw {
     width: 80%;
 }
@@ -72,6 +72,10 @@ h1 {
     margin-bottom: 1% !important;
 }
 
+.gc-1 > .glc > span {
+    padding: var(--cp) 20px;
+}
+
 .button {
     background-color: var(--secondary-color);
     color: white;
@@ -80,61 +84,63 @@ h1 {
     font-weight: 300;
     cursor: pointer;
     width: fit-content;
+    font-size: 0.5rem 5vw 1rem;
 }
 
 .custom-mw {
     max-width: 24.3vw;
 }
 
-.cp-1 {
-    padding: 8px 20px;
-}
-
 .w-fc {
     width: fit-content;
 }
 
-.cp-2 {
+.cp-1 {
     padding: 4px 25px;
 }
 
-.cm-2 {
-    margin-bottom: 10px !important;
-}
-
-.cm-3 {
+.cm-1 {
     margin: 0 0 -1.5% 0.5% !important;
 }
 
-.cm-4 {
+.cmt-1 {
+    margin-top: var(--cmt-2) !important;
+}
+
+.cmt-2 {
+    margin-top: 15% !important;
+}
+
+.cmt-3 {
+    margin-top: 10% !important;
+}
+
+.cmb-1 {
+    margin-bottom: 10px !important;
+}
+
+.cmb-2 {
     margin-bottom: 2% !important;
 }
 
-.cs-1 {
-    left: 25%;
+.cml {
+    margin-left: var(--cml);
 }
 
-.cs-2 {
-    left: 17.3%;
-}
-
-.cs-3 {
-    left: 21.5%;
-}
-
-.start80 {
-    left: 80%;
-}
-
-.text-on-pic-style h1 {
-    text-transform: uppercase;
-    color: white;
-    margin: 0;
+.cs {
+    left: 75%;
 }
 
 .cst {
     left: 13%;
     top: 5%;
+}
+
+.text-on-pic-style h1,
+.text-on-pic-style span {
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
 }
 
 footer {
@@ -167,11 +173,108 @@ footer {
     grid-area: last-content;
 }
 
-@media (max-width: 480px) {}
+@media (max-width: 540px) {
+    :root {
+        --cp: 6px;
+        --cfs: 0.8rem;
+    }
 
-@media (max-width: 1279px) {
+    .gc-1 {
+        grid-template-areas:
+            "first-title"
+            "second-title"
+            "image"
+            "desc"
+            "last-content";
+    }
+
+    .gc-1 > .gft,
+    .gc-1 > .gst {
+        text-align: center;
+    }
+
+    .gc-1 > img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .gc-1 > .g-desc {
+        height: fit-content;
+        padding: 0 25%;
+        text-align: center;
+        margin-top: 20px;
+        line-height: normal;
+    }
+
+    .gc-1 > .g-desc > .line,
+    .gc-1 > .glc > span {
+        margin-top: 5px !important;
+    }
+
+    .gc-1 > .glc {
+        margin-top: 20px;
+        display: grid;
+        place-items: center;
+        padding: 0 12.5%;
+        text-align: center;
+        line-height: normal;
+        row-gap: 10px;
+    }
+
+    .gc-2,
+    .gc-3,
+    .gc-4,
+    .gc-5 {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "image last-content";
+    }
+
+    .w-100-sm {
+        width: 100%;
+    }
+
+    .custom-mw {
+        max-width: 100%;
+    }
+
+    .text-on-pic-style #fw::after {
+        content: "\a";
+        white-space: pre;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --cml: 35px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --cmt-2: 15% !important;
+    }
+
+    #second-content {
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100vw;
+    }
+
+    #second-content .glc,
+    #second-content .g-img,
+    .gc-4 > .glc > span {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 541px) and (max-width: 1279px) {
     :root {
         --cmt-1: 30px;
+        --cmt-2: 10%;
+        --cml: 70px;
+        --cp: 8px;
+        --cfs: 1.25rem;
     }
 
     .gc-1 {
@@ -182,7 +285,6 @@ footer {
             "second-title second-title"
             "image image"
             "desc last-content";
-        column-gap: 5vw;
     }
 
     .gc-1 > .gft,
@@ -194,6 +296,7 @@ footer {
         place-self: center;
         margin-top: 20px;
         width: 90%;
+        max-height: 600px;
     }
 
     .gc-1 > .g-desc {
@@ -217,7 +320,8 @@ footer {
         line-height: normal;
     }
 
-    #first-content-card > .glc > span {
+    #first-content-card > .glc > span,
+    .gc-4 > .glc > span {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -229,17 +333,30 @@ footer {
 
     .gc-2,
     .gc-3,
-    .gc-4 {
+    .gc-4,
+    .gc-5 {
         grid-template-columns: 50% 50%;
         grid-template-areas: "image last-content";
     }
 
-    #second-content > .glc {
+    #second-content-card > .glc {
         justify-content: center;
+    }
+
+    .text-on-pic-style #fw::after {
+        content: "\a";
+        white-space: pre;
     }
 }
 
 @media (min-width: 1280px) {
+    :root {
+        --cmt-2: 2%;
+        --cml: 70px;
+        --cp: 8px;
+        --cfs: 1.25rem;
+    }
+
     .gc-1 {
         grid-template-columns: 45% 55%;
         grid-template-areas:
@@ -293,5 +410,10 @@ footer {
     .gc-4 > .g-img {
         justify-content: end;
         margin-right: 15vw !important;
+    }
+
+    .gc-5 {
+        grid-template-columns: 40% 60%;
+        grid-template-areas: "image last-content";
     }
 }
