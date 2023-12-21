@@ -241,6 +241,10 @@ footer {
         content: "\a";
         white-space: pre;
     }
+
+    .cst {
+        left: 0;
+    }
 }
 
 @media (max-width: 600px) {
@@ -346,6 +350,10 @@ footer {
     .text-on-pic-style #fw::after {
         content: "\a";
         white-space: pre;
+    }
+
+    .cst {
+        left: 7%;
     }
 }
 
