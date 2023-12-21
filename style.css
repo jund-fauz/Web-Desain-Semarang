@@ -22,10 +22,14 @@ a {
 }
 
 .cmt-1 {
-    margin-top: 1.8% !important;
+    margin-top: 2% !important;
 }
 
 .cmt-2 {
+    margin-top: 15% !important;
+}
+
+.cmt-3 {
     margin-top: 10% !important;
 }
 
@@ -50,76 +54,22 @@ h1 {
 }
 
 .title {
-    font-size: 4.5em;
-}
-
-.top70 {
-    top: 70%;
+    font-size: clamp(2em, 8vw, 4.5em);
 }
 
 .cw {
     width: 80%;
 }
 
-.low-res-fp {
-    background:url(pictures/eksplorasi-budaya-low-res.png) no-repeat;
-    width: 80%;
-}
-
-.low-res-rb {
-    background:url(pictures/ragam-batik-low-res.png) no-repeat;
-}
-
-.low-res-dw {
-    background:url(pictures/destinasi-wisata-low-res.png) no-repeat;
-}
-
-.low-res-fb {
-    background:url(pictures/festival-budaya-low-res.png) no-repeat;
-}
-
-.low-res-cb-bg {
-    background:url(pictures/candi-borobudur-bg-low-res.png) no-repeat;
-    width: 100%;
-}
-
-.low-res-cb {
-    background:url(pictures/candi-borobudur-low-res.png) no-repeat;
-}
-
-.low-res-bs-bg {
-    background:url(pictures/batik-solo-bg-low-res.png) no-repeat;
-    width: 100%;
-}
-
-.low-res-bs {
-    background:url(pictures/batik-solo-low-res.png) no-repeat;
-}
-
-.low-res-dcf-bg {
-    background:url(pictures/dcf-bg-low-res.png) no-repeat;
-    width: 100%;
-}
-
-.low-res-dcf {
-    background:url(pictures/dcf-low-res.png) no-repeat;
-}
-
 .line {
     height: 1px;
-    background-color: color-mix(
-        in srgb,
-        var(--primary-color),
-        transparent
-    );
+    background-color: color-mix(in srgb,
+            var(--primary-color),
+            transparent);
 }
 
-.parent-line {
+.gc-1 > .g-desc > p {
     margin-bottom: 1% !important;
-}
-
-.cm-1 {
-    margin: 1.5% 0 2.5% 0 !important;
 }
 
 .button {
@@ -137,7 +87,7 @@ h1 {
 }
 
 .cp-1 {
-    padding: 1.25% 3% 1.25% 3%;
+    padding: 8px 20px;
 }
 
 .w-fc {
@@ -145,11 +95,11 @@ h1 {
 }
 
 .cp-2 {
-    padding: 1.5% 8% 1.5% 8%;
+    padding: 4px 25px;
 }
 
 .cm-2 {
-    margin-bottom: 3% !important;
+    margin-bottom: 10px !important;
 }
 
 .cm-3 {
@@ -191,4 +141,157 @@ footer {
     background-color: var(--secondary-color);
     width: 100%;
     height: 3vw;
+}
+
+.gc {
+    display: grid;
+}
+
+.gft {
+    grid-area: first-title;
+}
+
+.gst {
+    grid-area: second-title;
+}
+
+.g-desc {
+    grid-area: desc;
+}
+
+.g-img {
+    grid-area: image;
+}
+
+.glc {
+    grid-area: last-content;
+}
+
+@media (max-width: 480px) {}
+
+@media (max-width: 1279px) {
+    :root {
+        --cmt-1: 30px;
+    }
+
+    .gc-1 {
+        grid-template-columns: 40% 60%;
+        grid-template-rows: auto auto auto 250px;
+        grid-template-areas:
+            "first-title first-title"
+            "second-title second-title"
+            "image image"
+            "desc last-content";
+        column-gap: 5vw;
+    }
+
+    .gc-1 > .gft,
+    .gc-1 > .gst {
+        text-align: center;
+    }
+
+    .gc-1 > .g-img {
+        place-self: center;
+        margin-top: 20px;
+        width: 90%;
+    }
+
+    .gc-1 > .g-desc {
+        place-items: end;
+        width: 80%;
+        height: fit-content;
+        margin-top: var(--cmt-1);
+    }
+
+    .gc-1 > .g-desc > p {
+        text-align: end;
+        padding-left: 5px;
+    }
+
+    .gc-1 > .g-desc > .line {
+        width: 70%;
+    }
+
+    .gc-1 > .glc > p {
+        margin: var(--cmt-1) 0 40px 0 !important;
+        line-height: normal;
+    }
+
+    #first-content-card > .glc > span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .line:not(:where(.gc-1, .g-desc, .line)) {
+        width: 85%;
+    }
+
+    .gc-2,
+    .gc-3,
+    .gc-4 {
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "image last-content";
+    }
+
+    #second-content > .glc {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1280px) {
+    .gc-1 {
+        grid-template-columns: 45% 55%;
+        grid-template-areas:
+            "first-title first-title"
+            "second-title image"
+            "desc image"
+            "desc last-content";
+    }
+
+    .gc-1 > .g-desc {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+    }
+
+    .gc-1 > .g-desc > .line {
+        width: 50%;
+    }
+
+    .gc-1 > .glc > p {
+        margin: 1.5% 0 2.5% 0 !important;
+    }
+
+    .gc-2 {
+        column-gap: 15px;
+        grid-template-columns: 40% 60%;
+        grid-template-areas: "image last-content";
+    }
+
+    .gc-3 {
+        grid-template-columns: 75% 25%;
+        grid-template-areas: "image last-content";
+    }
+
+    .gc-4 {
+        grid-template-columns: 75% 25%;
+        grid-template-areas: "image last-content";
+    }
+
+    #first-content-card > .glc > span {
+        position: absolute;
+        top: 70%;
+    }
+
+    .line:not(:where(.gc-1, .g-desc)) {
+        width: 75%;
+    }
+
+    .gc-4 > .g-img {
+        justify-content: end;
+        margin-right: 15vw !important;
+    }
 }
