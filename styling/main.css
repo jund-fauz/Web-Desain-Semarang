@@ -5,6 +5,10 @@
     --secondary-color: #B2A59B;
 }
 
+body > .container{
+    margin-top: 20px;
+}
+
 * {
     font-family: 'Barlow Semi Condensed', sans-serif;
     box-sizing: border-box;
