@@ -101,7 +101,7 @@ img:nth-child(3) {
         width: 95%;
     }
 
-    p:nth-child(2) {
+    .container > p:nth-child(2) {
         padding-left: 0;
         width: 100%;
         text-align: center;
