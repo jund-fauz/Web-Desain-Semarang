@@ -18,6 +18,10 @@ h1 {
     font-size: clamp(1em, 3vw, 1.5em);
 }
 
+.gc-1 > .title {
+    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
 .cfs {
     font-size: var(--cfs);
 }
@@ -68,15 +72,7 @@ h1 {
     margin: 0 0 -1.5% 0.5% !important;
 }
 
-#second-content > .gc {
-    margin-top: var(--cmt-2) !important;
-}
-
-.cmt-1 {
-    margin-top: 10% !important;
-}
-
-.cmt-2 {
+.gc-5 {
     margin-top: 15% !important;
 }
 
@@ -101,6 +97,10 @@ h1 {
     top: 5%;
 }
 
+.text-on-pic-style {
+    margin-top: 10% !important;
+}
+
 .text-on-pic-style h1,
 .text-on-pic-style span {
     text-transform: uppercase;
@@ -108,7 +108,7 @@ h1 {
     margin: 0;
 }
 
-.gc {
+div[class^=gc] {
     display: grid;
 }
 
@@ -180,12 +180,19 @@ h1 {
         row-gap: 10px;
     }
 
-    .gc-2,
-    .gc-3,
-    .gc-4,
-    .gc-5 {
+    #first-content-card > .glc > span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    div[class^=gc-]:where(:not(div[class^=gc-1])) {
         grid-template-columns: 50% 50%;
         grid-template-areas: "image last-content";
+    }
+
+    #second-content > div[class^=gc] {
+        margin-top: var(--cmt-2) !important;
     }
 
     .w-100-sm {
@@ -205,8 +212,8 @@ h1 {
         left: 0;
     }
 
-    #second-content-card > .g-img {
-        padding-left: 10px !important;
+    .gc-4 > .g-img {
+        padding-left: 14px;
     }
 }
 
@@ -294,14 +301,15 @@ h1 {
         transform: translateY(-50%);
     }
 
+    #second-content > div[class^=gc] {
+        margin-top: var(--cmt-2) !important;
+    }
+
     .line:not(:where(.gc-1, .g-desc, .line)) {
         width: 85%;
     }
 
-    .gc-2,
-    .gc-3,
-    .gc-4,
-    .gc-5 {
+    div[class^=gc-]:where(:not(div[class^=gc-1])) {
         grid-template-columns: 50% 50%;
         grid-template-areas: "image last-content";
     }
@@ -322,7 +330,6 @@ h1 {
 
 @media (min-width: 1280px) {
     :root {
-        --cmt-2: 2%;
         --cml: 70px;
         --cp: 8px;
         --cfs: 1.25rem;
@@ -357,16 +364,19 @@ h1 {
         column-gap: 15px;
         grid-template-columns: 40% 60%;
         grid-template-areas: "image last-content";
+        margin-top: 15px;
     }
 
     .gc-3 {
         grid-template-columns: 75% 25%;
         grid-template-areas: "image last-content";
+        margin-top: 100px;
     }
 
     .gc-4 {
         grid-template-columns: 75% 25%;
         grid-template-areas: "image last-content";
+        margin-top: 85px;
     }
 
     #first-content-card > .glc > span {
