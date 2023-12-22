@@ -77,7 +77,7 @@ footer {
 
 @media (min-width: 992px) {
     :root {
-        --ml: 2vw;
+        --ml: 4vw;
     }
 
     * {
