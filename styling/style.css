@@ -1,52 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;500;700&display=swap');
-
-:root {
-    --primary-color: #607274;
-    --secondary-color: #B2A59B;
-}
-
 body {
     overflow-x: hidden;
-}
-
-* {
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    box-sizing: border-box;
-    color: var(--primary-color);
-    text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
-    cursor: default;
-}
-
-a {
-    text-decoration: none;
-}
-
-p {
-    margin: 0 !important;
 }
 
 h1 {
     text-transform: capitalize;
 }
 
-.fw700 {
-    font-weight: 700;
-}
-
-.fw500 {
-    font-weight: 500;
-}
-
-.fw300 {
-    font-weight: 300;
+.fw400 {
+    font-weight: 400;
 }
 
 .title {
     font-size: clamp(2em, 8vw, 4.5em);
-}
-
-.subtitle {
-    font-size: clamp(0.8rem, 2vw, 1.5rem);
 }
 
 .gc-1 > .glc > p {
@@ -72,7 +37,7 @@ h1 {
     margin-bottom: 1% !important;
 }
 
-.gc-1 > .glc > span {
+.gc-1 > .glc > a {
     padding: var(--cp) 20px;
 }
 
@@ -103,16 +68,16 @@ h1 {
     margin: 0 0 -1.5% 0.5% !important;
 }
 
-.cmt-1 {
+#second-content > .gc {
     margin-top: var(--cmt-2) !important;
+}
+
+.cmt-1 {
+    margin-top: 10% !important;
 }
 
 .cmt-2 {
     margin-top: 15% !important;
-}
-
-.cmt-3 {
-    margin-top: 10% !important;
 }
 
 .cmb-1 {
@@ -141,12 +106,6 @@ h1 {
     text-transform: uppercase;
     color: white;
     margin: 0;
-}
-
-footer {
-    background-color: var(--secondary-color);
-    width: 100%;
-    height: 3vw;
 }
 
 .gc {
@@ -207,7 +166,7 @@ footer {
     }
 
     .gc-1 > .g-desc > .line,
-    .gc-1 > .glc > span {
+    .gc-1 > .glc > a {
         margin-top: 5px !important;
     }
 
@@ -244,6 +203,10 @@ footer {
 
     .cst {
         left: 0;
+    }
+
+    #second-content-card > .g-img {
+        padding-left: 10px !important;
     }
 }
 
