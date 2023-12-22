@@ -5,7 +5,7 @@
     --secondary-color: #B2A59B;
 }
 
-body > .container{
+body > .container {
     margin-top: 20px;
 }
 
@@ -34,7 +34,8 @@ button span {
     transition: .3s;
 }
 
-.button:hover {
+.button:hover,
+.button:active {
     background-color: #948980;
 }
 
