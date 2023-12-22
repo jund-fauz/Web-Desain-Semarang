@@ -13,8 +13,22 @@
     user-select: none;
 }
 
+nav {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+button,
+button span {
+    cursor: pointer;
+}
+
+.dropdown-item:hover:not(:active) {
+    background-color: rgba(184, 184, 184, 0.548);
+}
+
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 p {
@@ -40,6 +54,21 @@ p {
 footer {
     background-color: var(--secondary-color);
     width: 100%;
-    height: 3vw;
+    height: 50px;
     margin-top: 15% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    * {
+        scroll-padding: 29vh;
+    }
+}
+
+@media (min-width: 992px) {
+    * {
+        scroll-padding: 50px;
+    }
 }

@@ -51,7 +51,6 @@ h1 {
     border-radius: 16px;
     text-transform: capitalize;
     font-weight: 300;
-    cursor: pointer;
     width: fit-content;
     font-size: 0.5rem 5vw 1rem;
 }
@@ -191,7 +190,7 @@ div[class^=gc] {
         grid-template-areas: "image last-content";
     }
 
-    #second-content > div[class^=gc] {
+    #second-content div[class^=gc] {
         margin-top: var(--cmt-2) !important;
     }
 
@@ -212,8 +211,8 @@ div[class^=gc] {
         left: 0;
     }
 
-    .gc-4 > .g-img {
-        padding-left: 14px;
+    .gc-4 img {
+        width: 90%;
     }
 }
 
